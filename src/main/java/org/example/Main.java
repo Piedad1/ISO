@@ -8,7 +8,7 @@ import org.example.model.Estudiante;
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("Hello world!");
+        System.out.println("Hello world!!");
         Estudiante estudiante = new Estudiante();
         CursoPropio curso = new CursoPropio();
         GestorMatriculacionController.realizarMatriculacion(curso, estudiante);
