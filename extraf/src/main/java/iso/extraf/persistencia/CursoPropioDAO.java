@@ -9,4 +9,9 @@ import iso.extraf.negocio.entities.Estudiante;
 public class CursoPropioDAO {
 	private Connection dbConnection;
 
+	public void realizarMatriculacion(CursoPropio curso, Estudiante estudiante) {
+		
+		
+	}
+
 }

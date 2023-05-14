@@ -9,5 +9,6 @@ public class GestorPropuestasCursos {
 	}
 	
 	public CursoPropio editarPropuestaCurso(CursoPropio curso) {
+		return curso;
 	}
 }
