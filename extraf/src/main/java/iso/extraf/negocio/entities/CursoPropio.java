@@ -12,10 +12,19 @@ public class CursoPropio {
 	    private double tasaMatricula;
 	    private int edicion;
 
+	    public enum TipoCurso {
+	    	MASTER, EXPERTO, ESPECIALISTA, FORMACION_AVANZADA, FORMACION_CONTINUA, MICROCREDENCIALES,CORTA_DURACION
+	    }
+	    
+	    public enum EstadoCurso {
+	    	PROPUESTO, VALIDADO, PROPUESTA_RECHAZADA, EN_MATRICULACION, EN_IMPARTICION, TERMINADO
+	    }
+	    
 	    public CursoPropio() {
 	    }
 
-	    public CursoPropio(String id, String nombre, int ects, Date fechaInicio, Date fechaFin, double tasaMatricula, int edicion) {
+	    public CursoPropio(String id, String nombre, int ects, Date fechaInicio, Date fechaFin, 
+	    		double tasaMatricula, int edicion) {
 	        this.id = id;
 	        this.nombre = nombre;
 	        this.ects = ects;
