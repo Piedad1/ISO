@@ -16,6 +16,10 @@ public class CursoPropio {
 	    	MASTER, EXPERTO, ESPECIALISTA, FORMACION_AVANZADA, FORMACION_CONTINUA, MICROCREDENCIALES,CORTA_DURACION
 	    }
 	    
+	    public enum EstadoCurso {
+	    	PROPUESTO, VALIDADO, PROPUESTA_RECHAZADA, EN_MATRICULACION, EN_IMPARTICION, TERMINADO
+	    }
+	    
 	    public CursoPropio() {
 	    }
 
