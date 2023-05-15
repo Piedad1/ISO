@@ -4,11 +4,8 @@ import java.util.Date;
 
 public class Materia {
 	private String nombre;
-
     private double horas;
-
     private Date fechaInicio;
-
     private Date fechaFin;
 
     public Materia() {

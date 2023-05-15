@@ -1,18 +1,21 @@
 package iso.extraf.negocio.entities;
 
 import java.util.Date;
+import java.util.List;
 
 public class CursoPropio {
 	private String id;
-	//////
 	 private String nombre;
 	    private int ects;
 	    private Date fechaInicio;
 	    private Date fechaFin;
 	    private double tasaMatricula;
 	    private int edicion;
+	    private List<Materia> materias;
+	    
 
 	    public CursoPropio() {
+	    	this.materias = new ArrayList();
 	    }
 
 	    public CursoPropio(String id, String nombre, int ects, Date fechaInicio, Date fechaFin, double tasaMatricula, int edicion) {
