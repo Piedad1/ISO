@@ -7,6 +7,7 @@ public class Materia {
     private double horas;
     private Date fechaInicio;
     private Date fechaFin;
+    private Profesor responsable;
 
     public enum ModoPago {
     	TARJETA_CREDITO, TRANSFERENCIA
@@ -15,11 +16,12 @@ public class Materia {
     public Materia() {
     }
 
-    public Materia(String nombre, double horas, Date fechaInicio, Date fechaFin) {
+    public Materia(String nombre, double horas, Date fechaInicio, Date fechaFin, Profesor responsable) {
         this.nombre = nombre;
         this.horas = horas;
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
+        this.responsable = responsable;
     }
 
     public String getNombre() {

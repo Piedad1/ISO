@@ -9,16 +9,18 @@ public class Matricula {
 	private static CursoPropioDAO dao = new CursoPropioDAO();
     private Date fecha;
     private boolean pagado;
-    private String atribute;
+    private CursoPropio titulo;
+    private Estudiante estudiante;
 
     public Matricula() {
 
     }
 
-    public Matricula(Date fecha, boolean pagado, String atribute) {
+    public Matricula(Date fecha, boolean pagado, CursoPropio titulo, Estudiante estudiante) {
         this.fecha = fecha;
         this.pagado = pagado;
-        this.atribute = atribute;
+        this.titulo = titulo;
+        this.estudiante = estudiante;
     }
 
 
@@ -37,14 +39,6 @@ public class Matricula {
 
     public void setPagado(boolean pagado) {
         this.pagado = pagado;
-    }
-
-    public String getAtribute() {
-        return atribute;
-    }
-
-    public void setAtribute(String atribute) {
-        this.atribute = atribute;
     }
 
     public static boolean realizarMatriculacion(CursoPropio curso, Estudiante estudiante) {
