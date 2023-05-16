@@ -12,6 +12,10 @@ public class CursoPropio {
 	    private double tasaMatricula;
 	    private int edicion;
 	    private List<Materia> materias;
+	    private Centro centro;
+	    private List<Matricula> matriculas;
+	    private Profesor director;
+	    private Profesor secretario;
 	    
 
 	    public enum TipoCurso {
@@ -27,7 +31,7 @@ public class CursoPropio {
 	    }
 
 	    public CursoPropio(String id, String nombre, int ects, Date fechaInicio, Date fechaFin, 
-	    		double tasaMatricula, int edicion) {
+	    		double tasaMatricula, int edicion, Profesor director, Profesor secretario) {
 	        this.id = id;
 	        this.nombre = nombre;
 	        this.ects = ects;
@@ -35,6 +39,8 @@ public class CursoPropio {
 	        this.fechaFin = fechaFin;
 	        this.tasaMatricula = tasaMatricula;
 	        this.edicion = edicion;
+	        this.director = director;
+	        this.secretario = secretario;
 	    }
 
 	    public String getId() {

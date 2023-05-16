@@ -2,6 +2,8 @@ package iso.extraf.negocio.entities;
 
 public class ProfesorUCLM extends Profesor{
 
+	private Centro centroAdquisicion;
+	
 	public ProfesorUCLM() {
 		
     }

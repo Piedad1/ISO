@@ -1,17 +1,19 @@
 package iso.extraf.negocio.entities;
+
+import java.util.List;
+
 //////
 public class Centro {
 	private String nombre;
 	private String localizacion;
-    private String attribute;
+	private List<ProfesorUCLM> plantilla;
 
     public Centro() {
     }
 
-    public Centro(String nombre, String localizacion, String attribute) {
+    public Centro(String nombre, String localizacion) {
         this.nombre = nombre;
         this.localizacion = localizacion;
-        this.attribute = attribute;
     }
 
     public String getNombre() {
@@ -28,13 +30,5 @@ public class Centro {
 
     public void setLocalizacion(String localizacion) {
         this.localizacion = localizacion;
-    }
-
-    public String getAttribute() {
-        return attribute;
-    }
-
-    public void setAttribute(String attribute) {
-        this.attribute = attribute;
     }
 }
