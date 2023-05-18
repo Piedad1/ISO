@@ -2,6 +2,7 @@ package iso.extraf.negocio.entities;
 
 import java.util.Date;
 import java.util.List;
+import java.util.*;
 
 public class CursoPropio {
 	private String id;
