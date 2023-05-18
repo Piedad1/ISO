@@ -1,11 +1,14 @@
 package iso.extraf.negocio.controllers;
 
 import iso.extraf.negocio.entities.CursoPropio;
+import iso.extraf.persistencia.CursoPropioDAO;
 
 public class GestorPropuestasCursos {
 	public CursoPropio realizarPropuestaCurso() {
-		CursoPropio cp = new CursoPropio();
-		return null;
+		return new CursoPropio();
+	}
+	public CursoPropio realizarPropuestaCurso(CursoPropioDAO dao) {
+		return new CursoPropio(dao);
 	}
 	
 	public CursoPropio editarPropuestaCurso(CursoPropio curso) {

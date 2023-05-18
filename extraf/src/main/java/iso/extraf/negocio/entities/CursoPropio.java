@@ -3,6 +3,7 @@ package iso.extraf.negocio.entities;
 import java.util.Date;
 import java.util.List;
 import java.util.*;
+import iso.extraf.persistencia.*;
 
 public class CursoPropio {
 	private String id;
@@ -17,6 +18,7 @@ public class CursoPropio {
 	    private List<Matricula> matriculas;
 	    private Profesor director;
 	    private Profesor secretario;
+		private CursoPropioDAO dao;
 	    
 
 	    public enum TipoCurso {
@@ -27,13 +29,22 @@ public class CursoPropio {
 	    	PROPUESTO, VALIDADO, PROPUESTA_RECHAZADA, EN_MATRICULACION, EN_IMPARTICION, TERMINADO
 	    }
 	    
-	    public CursoPropio() {
+	    
+	    
+	    public CursoPropio(CursoPropioDAO dao) {
 	    	this.materias = new ArrayList();
+	    	this.dao = dao;
 	    }
+	    
+	    public CursoPropio() {
+	    	this(new CursoPropioDAO());
+	    }
+	    
 
 	    public CursoPropio(String id, String nombre, int ects, Date fechaInicio, Date fechaFin, 
 	    		double tasaMatricula, int edicion, Profesor director, Profesor secretario) {
-	        this.id = id;
+	        this();
+	    	this.id = id;
 	        this.nombre = nombre;
 	        this.ects = ects;
 	        this.fechaInicio = fechaInicio;
