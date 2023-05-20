@@ -10,7 +10,10 @@ public class CursoPropioDAO {
 	private Connection dbConnection;
 
 	public void realizarMatriculacion(CursoPropio curso, Estudiante estudiante) {
-		
+
+	}
+	
+	public void crearNuvoCurso(CursoPropio curso) {
 		
 	}
 
