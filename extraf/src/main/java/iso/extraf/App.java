@@ -1,6 +1,7 @@
 package iso.extraf;
 
 import java.util.List;
+import java.util.Map;
 
 import iso.extraf.persistencia.GestorBD;
 
@@ -12,17 +13,13 @@ public class App {
 	public static void main(String[] args) {
 		GestorBD gbd = GestorBD.conectarBD();
 		
-		List<Object[]> resultado = gbd.select("SELECT * FROM cursospropios");
+		List<Map<String, Object>> resultado = gbd.select("SELECT * FROM cursospropios");
 		
-		System.out.println(resultado.size());
+		System.out.println("Filas: " + resultado.size());
 		
-		for (Object[] fila : resultado) {
+		for (Map<String, Object> fila : resultado) {
 			
-			for (Object columna : fila) {
-				System.out.print(columna + "\t");
-			}
-			
-			System.out.println();
+			System.out.println(fila.get("nombre") + " (" + fila.get("id") + ")");
 		}
 	}
 }

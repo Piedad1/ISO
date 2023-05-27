@@ -7,6 +7,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.*;
 
 public class GestorBD {
 	public static GestorBD conectarBD() {
@@ -40,23 +42,24 @@ public class GestorBD {
 		}
 	}
 
-	public List<Object[]> select(String sql) {
+	public List<Map<String, Object>> select(String sql) {
 
 		PreparedStatement stmt;
 		try {
 			stmt = conn.prepareStatement(sql);
 			stmt.execute();
 			ResultSet rs = stmt.getResultSet();
-			List<Object[]> filas = new ArrayList<>();
+			List<Map<String, Object>> filas = new ArrayList<>();
 			int numColumnas = rs.getMetaData().getColumnCount();
 			
 			
 			// Cada fila un array de objetos
 			while (rs.next()) {
-				Object[] fila = new Object[numColumnas];
+				Map<String, Object> fila = new HashMap<>();
 				
 				for(int i = 1; i < numColumnas; i++) {
-					fila[i-1] = rs.getObject(i);
+					String colName = rs.getMetaData().getColumnName(i);
+					fila.put(colName, rs.getObject(i));
 				}
 				
 				filas.add(fila);
