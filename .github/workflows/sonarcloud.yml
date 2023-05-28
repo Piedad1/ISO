@@ -1,9 +1,7 @@
 name: SonarCloud
 
 on:
-  push:
-    branches-ignore:
-      - '*'
+  [push]
 
 jobs:
   sonarcloud:
